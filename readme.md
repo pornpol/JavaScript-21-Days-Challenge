@@ -6,7 +6,7 @@
 
 1. Falling Snow
 
-   - IIFE ()
+   - IIFE เพื่อสร้าง Lexical scope ป้องกันการเกิด pullution ใน Global variable
 
    ```javascript
    (() => {
@@ -17,16 +17,16 @@
    - Canvas
 
    ```javascript
-   const canvas = document.getElementById('falling-snow-canvas');
-   canvas.width = window.innerWidth;
-   canvas.height = window.innerHeight;
-   canvasContext = canvas.getContext('2d');
+   const canvas = document.getElementById('falling-snow-canvas'); //อ้างถึง canvas ใน HTML
+   canvas.width = window.innerWidth; // กำหนดขนาดความกว้าง canvas ให้เท่ากับขนาด window
+   canvas.height = window.innerHeight; // กำหนดขนาดความสูง canvas ให้เท่ากับขนาด window
+   canvasContext = canvas.getContext('2d'); // อ้างถึง Canvas Context แบบ 2d
 
    // วาดวงกลม
-   canvasContext.beginPath();
-   canvasContext.arc(snowBall.x, snowBall.y, snowBall.radius, 0, Math.PI * 2);
-   canvasContext.fillStyle = `rgba(255,255,255, ${snowBall.opacity})`;
-   canvasContext.fill();
+   canvasContext.beginPath(); // เริ่มวาด
+   canvasContext.arc(snowBall.x, snowBall.y, snowBall.radius, 0, Math.PI * 2); // สร้างวงกลม ที่คำแหน่ง x, ตำแหน่ง y, รัศมี, รอบวง (2 pi)
+   canvasContext.fillStyle = `rgba(255,255,255, ${snowBall.opacity})`; // เตืมสีขาว
+   canvasContext.fill(); // วาด
    ```
 
    ***
