@@ -32,6 +32,25 @@
    ***
 
 1. Countdown Timer
+
+   - Date()
+
+   ```javascript
+   const now = new Date().getTime(); // สร้าง new object Date และ get ค่าเวลาปัจจุบัน
+   const newYear = new Date('December 31, 2020 23:59:59').getTime(); // สร้าง new object Date และ get ค่าเวลาที่กำหนด
+   ```
+
+   - innerText
+
+   ```javascript
+   function setElementInnerText(id, text) {
+     const element = document.getElementById(id);
+     element.innerText = text;
+   }
+   ```
+
+   ***
+
 1. Async Await
 1. Eye Rolling
 1. Watercolor Painting
