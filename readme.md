@@ -136,6 +136,36 @@
    ***
 
 1. Eye Rolling
+
+   - Query Selector
+
+   ```javascript
+   const bodyElem = document.querySelector('body'); // select body element
+   const eyeElems = document.querySelectorAll('.eye'); // select all class eye elements
+   ```
+
+   - Event listener
+
+   ```javascript
+   bodyElem.addEventListener('mousemove', onMouseMove);
+   ```
+
+   - Calculate & Update position
+
+   ```javascript
+   function onMouseMove({ pageX, pageY }) {
+     eyeElems.forEach((eyeElem) => {
+       const { left, top } = eyeElem.getBoundingClientRect();
+
+       const eyeCenterX = left + eyeElem.offsetWidth / 2;
+       const eyeCenterY = top + eyeElem.offsetHeight / 2;
+       const radian = Math.atan2(pageX - eyeCenterX, pageY - eyeCenterY);
+       const angle = ((radian * 180) / Math.PI) * -1;
+       eyeElem.style.transform = `rotate(${angle}deg)`;
+     });
+   }
+   ```
+
 1. Watercolor Painting
 1. Duck Hunt
 1. Konami Code
