@@ -166,7 +166,15 @@
    }
    ```
 
+   ***
+
 1. Watercolor Painting
+
+   - Canvas
+   - Calculation
+
+   ***
+
 1. Duck Hunt
 1. Konami Code
 1. What is "this"?
